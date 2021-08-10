@@ -18,7 +18,6 @@ returns:  uuid (as text) of newly inserted message
 create or replace function public.create_email_message(message JSON)
    returns text
    language plpgsql
-   SECURITY DEFINER
   -- Set a secure search_path: trusted schema(s), then 'pg_temp'.
   -- SET search_path = admin, pg_temp;
   as

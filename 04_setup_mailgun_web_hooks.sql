@@ -12,7 +12,6 @@
 CREATE OR REPLACE FUNCTION public.mailgun_webhook("event-data" jsonb, "signature" jsonb)
    returns text 
    language plpgsql
-   SECURITY DEFINER
    -- Set a secure search_path: trusted schema(s), then 'pg_temp'.
    -- SET search_path = admin, pg_temp;
   as
@@ -48,7 +47,6 @@ $$
 create or replace function public.create_mailgun_webhook("hook_name" text, "mode" text)
    returns text 
    language plpgsql
-   SECURITY DEFINER
   -- Set a secure search_path: trusted schema(s), then 'pg_temp'.
   -- SET search_path = admin, pg_temp;
   as
@@ -129,7 +127,6 @@ $$
 create or replace function public.setup_mailgun_webhooks()
    returns text 
    language plpgsql
-   SECURITY DEFINER
   -- Set a secure search_path: trusted schema(s), then 'pg_temp'.
   -- SET search_path = admin, pg_temp;
   as
@@ -242,7 +239,6 @@ $$
 create or replace function public.get_current_mailgun_webhooks()
    returns jsonb 
    language plpgsql
-   SECURITY DEFINER
   -- Set a secure search_path: trusted schema(s), then 'pg_temp'.  abort 
   -- SET search_path = admin, pg_temp;
   as
