@@ -1,6 +1,7 @@
 /************************************************************
 *  Create the messages table
 ************************************************************/
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE if not exists public.messages
 (
     id uuid primary key default uuid_generate_v4(),

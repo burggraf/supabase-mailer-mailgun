@@ -5,6 +5,7 @@
  * low level function to send email message
  *
  ************************************************************/
+CREATE EXTENSION IF NOT EXISTS HTTP;
 CREATE OR REPLACE FUNCTION public.send_email_message (message json)
   RETURNS json
   LANGUAGE plpgsql
