@@ -1,3 +1,8 @@
+# DEPRECATED:  USE [https://github.com/burggraf/supabase-mailer](https://github.com/burggraf/supabase-mailer)
+This project has been expanded to support multiple mail providers, and the name has been changed to the more generic **supabase-mailer**.
+
+
+
 # supabase-mailer-mailgun
 Send and track email from Supabase / PostgreSQL using Mailgun
 
